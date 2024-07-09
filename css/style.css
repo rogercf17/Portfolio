@@ -1,0 +1,247 @@
+:root {
+    --cor-de-fundo: #1d1d1d;
+    --fonte-principal: "Exo", sans-serif;
+    --cor-da-letra: #d6d6d6;
+    --cor-preta: #000;
+    --cor-branca: #fdfdfd;
+    --cor-azul: #008cff;
+    --cor-vermelha: #c93838;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100vw;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-da-letra);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#cabecalho {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    padding: 0 35px 0 20px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--cor-de-fundo);
+}
+.cabecalho-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+.nome {
+    cursor: pointer;
+}
+
+.menu-navegacao ul,li,a{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row nowrap;
+    gap: 3rem;
+    text-decoration: none;
+    color: var(--cor-da-letra);
+    transition: all 0.5s ease-in;
+}
+
+#hero {
+    margin-top: calc(25vh + 1rem);
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1.8rem;
+    font-size: 28px;
+}
+
+.imagem-roger {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.box-redes {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.box-redes img {
+    width: 1.5rem;
+    height: 1.3rem;
+}
+
+#conteudo {
+    width: 100%;
+    height: auto;
+    margin-top: 12rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color: var(--cor-branca);
+}
+
+.box-apresentacao {
+    color: var(--cor-preta);
+    width: 100%;
+    padding: 40px;
+    text-align: justify;
+    letter-spacing: .102rem;
+    font-size: 22px;
+}
+
+.box-apresentacao p {
+    width: 70%;
+}
+
+.box-titulo {
+    background-color: var(--cor-de-fundo);
+}
+.box-titulo h2 {
+    text-align: center;
+    margin: 6rem 0;
+    font-size: 36px;
+}
+
+.box-projetos {
+    width: 100%;
+    color: var(--cor-preta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projetos {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 2rem;
+}
+.projeto {
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+    border-radius: 3%;
+}
+.projeto div {
+    display: flex;
+}
+.projeto div img{
+    width: 6vw;
+    height: 6vh;
+    margin-bottom: 1rem;
+}
+.imc,.jogo-memoria {
+    background-color: var(--cor-azul);
+}
+.calculadora,.jokenpo {
+    background-color: var(--cor-vermelha);
+}
+.projeto h3 {
+    font-size: 22px;
+}
+.projeto img {
+    margin-top: 2rem;
+    width: 5rem;
+    height: 7.5rem;
+}
+.projeto p {
+    text-align: justify;
+    margin: 1rem;
+    font-size: 14px;
+    color: var(--cor-branca);
+}
+.projeto .link-projeto {
+    color: #fdfdfd;
+    align-self: flex-start;
+    flex-shrink: 1;
+    transition: all .5s ease-in;
+    height: 20vh;
+    width: 10vw;
+    position: relative;
+    left: 1rem;
+}
+
+#rodape {
+    margin-top: 5rem;
+    padding: 1rem 2rem 1rem 1.5rem;
+    gap: 2rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 13px;
+    background-color: #111111;
+}
+.box-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+.box-mapa h3 {
+    color: var(--cor-azul);
+}
+.box-mapa ul li {
+    line-height: 1.8;
+}
+.box-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.box-infos a {
+    color: var(--cor-vermelha);
+}
+
+@media screen and (max-width: 770px) {
+    #cabecalho {
+        display: inline-block;
+        text-align: center;
+        /* gap: 5px; */
+    }
+    #hero {
+        text-align: center;
+    }
+    .box-apresentacao{
+        text-align: justify;
+    }
+    .projetos {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    .projetos .projeto {
+        width: 95%;
+        font-size: 12px;
+        height: auto;
+    }
+    .projeto div {
+        gap: 20px;
+    }
+    .projeto .link-projeto {
+        width: 80%;
+    }
+}

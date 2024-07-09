@@ -1,0 +1,230 @@
+:root {
+    --cor-de-fundo: #1d1d1d;
+    --fonte-principal: "Exo", sans-serif;
+    --cor-da-letra: #d6d6d6;
+    --cor-preta: #000;
+    --cor-branca: #fdfdfd;
+    --cor-azul: #008cff;
+    --cor-vermelha: #c93838;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    width: 100vw;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-da-letra);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#cabecalho {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    padding: 0 35px 0 20px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--cor-de-fundo);
+}
+.cabecalho-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+.nome {
+    cursor: pointer;
+}
+
+.menu-navegacao ul,li,a{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row nowrap;
+    gap: 3rem;
+    text-decoration: none;
+    color: var(--cor-da-letra);
+}
+
+#box-curriculo {
+    width: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #111111;
+    margin: calc(10vh + 1rem) auto calc(2vh + 1rem) auto;
+    padding: 2rem;
+    
+}
+strong {
+    color: var(--cor-azul);
+}
+#box-curriculo div {
+    margin-bottom: 4rem;
+}
+.box-titulo {
+    text-align: center;
+    margin: 4rem auto;
+    line-height: 2.3rem;
+    letter-spacing: .305rem;
+    font-size: 22px;
+}
+.box-contato {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+.box-contato h2, .box-formacao h2, .box-habilidades h2, .box-cursos h2 {
+    border-bottom: 1px solid var(--cor-da-letra);
+    margin-bottom: 2rem ;
+}
+.box-formacao {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+.box-formacao ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.box-formacao ul li {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+.box-formacao ul li h3{
+    color: var(--cor-azul);
+}
+.box-habilidades {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+.box-habilidades ul {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 4rem;
+    column-gap: .2rem;
+}
+.box-habilidades ul li {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border: 1px solid #050505;
+    width: 20vw;
+    padding: 1rem;
+    border-radius: 5%;
+    font-weight: 700;
+}
+.box-habilidades ul li img {
+    align-self: center;
+    margin-bottom: 1rem;
+}
+.box-cursos {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.box-cursos ul {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: .2rem;
+    row-gap: 2rem;
+}
+.box-cursos ul li {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border: 1px solid #050505;
+    width: 30vw;
+    padding: 1rem;
+    border-radius: 2%;
+    justify-self: center;
+}
+.box-cursos ul li h3 {
+    margin-bottom: 1rem;
+    font-size: 18px;
+    color: var(--cor-azul);
+    text-align: center;
+}
+
+#rodape {
+    margin-top: 5rem;
+    padding: 1rem 2rem 1rem 1.5rem;
+    gap: 2rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 13px;
+    background-color: #111111;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+.box-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+.box-mapa h3 {
+    color: var(--cor-azul);
+}
+.box-mapa ul li {
+    line-height: 1.8;
+}
+.box-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.box-infos a {
+    color: var(--cor-vermelha);
+}
+
+@media screen and (max-width: 770px) {
+    #box-curriculo {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        text-align: center;
+        font-size: 12px;
+    }
+    .box-contato h2, .box-formacao h2, .box-habilidades h2, .box-cursos h2 {
+        border: none;
+    }
+    .box-habilidades ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .box-habilidades ul li {
+        align-self: center;
+        width: 80%;
+    }
+    .box-cursos ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .box-cursos ul li {
+        width: 80%;
+        align-self: center;
+    }
+
+}
