@@ -1,6 +1,7 @@
 import { IconsLink } from '../../components/IconsLink/IconsLink'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { ProfileResponse } from '../../components/ProfileResponse/ProfileResponse'
+import { ButtonLink } from '../../components/ButtonLink/ButtonLink'
 
 const links = [
     {
@@ -31,19 +32,15 @@ export default function Hero() {
                     </p>
 
                     <div className="mt-9 flex flex-wrap gap-3.5">
+                        <ButtonLink secao='#projetos' texto='Ver Projetos' />
                         <a
-                            href="#projetos"
-                            className="rounded-lg border border-transparent bg-accent px-6 py-3 text-[0.95rem] font-semibold text-white transition-colors hover:bg-accent-hover motion-reduce:transition-none"
-                        >
-                            Ver projetos
-                        </a>
-                        <a
-                            href="/curriculo-roger-cardoso-ferreira.pdf"
+                            href="../../../CV - Roger Cardoso Ferreira.pdf"
                             download
                             className="rounded-lg border border-line px-6 py-3 text-[0.95rem] font-semibold text-fg transition-colors hover:border-accent motion-reduce:transition-none"
                         >
                             Baixar currículo
                         </a>
+                        <ButtonLink secao='#contato' texto='Fale Comigo' />
                     </div>
 
                     <div className="mt-8 flex gap-5 text-2xl">
