@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@theme {
+    --color-canvas: #1d1d1d;
+    --color-surface: #262626;
+    --color-line: #3a3a3a;
+    --color-fg: #f2f2f2;
+    --color-muted: #b4b4b4;
+    --color-accent: #008cff;
+    --color-accent-hover: #2e9fff;
+    --color-accent-soft: #7fc4ff;
+    --color-ok: #4cc38a;
+
+    --font-sans: 'Exo', system-ui, sans-serif;
+
+    --animate-hero-in: hero-in 0.7s ease-out both;
+    @keyframes hero-in {
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: none; }
+    }
+}
+
+@layer base {
+    body { @apply bg-canvas text-fg; }
+    :focus-visible { outline: 2px solid var(--color-accent-soft); outline-offset: 4px; }
+}
