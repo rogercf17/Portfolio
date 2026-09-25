@@ -1,18 +1,5 @@
-import { IconsLink } from '../../components/IconsLink/IconsLink'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { ProfileResponse } from '../../components/ProfileResponse/ProfileResponse'
 import { ButtonLink } from '../../components/ButtonLink/ButtonLink'
-
-const links = [
-    {
-        icon: FaGithub,
-        link: 'https://github.com/rogercf17',
-    },
-    {
-        icon: FaLinkedin,
-        link: 'https://www.linkedin.com/in/roger-cardoso-ferreira-030565212/',
-    },
-]
 
 export default function Hero() {
     return (
@@ -41,12 +28,6 @@ export default function Hero() {
                             Baixar currículo
                         </a>
                         <ButtonLink secao='#contato' texto='Fale Comigo' />
-                    </div>
-
-                    <div className="mt-8 flex gap-5 text-2xl">
-                        {links.map(item => (
-                            <IconsLink key={item.link} icon={item.icon} link={item.link} />
-                        ))}
                     </div>
                 </div>
 

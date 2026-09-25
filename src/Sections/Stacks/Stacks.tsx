@@ -27,7 +27,7 @@ const stacks = [
     {
         id: "cloud",
         categoria: "Cloud",
-        itens: ["Azure", "AWS"]
+        itens: ["Azure", "AWS", "Neon"]
     },
     {
         id: "sistemas",
